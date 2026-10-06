@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>モグラたたきゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    
+    <!-- 1. スタート画面 -->
+    <div id="start-screen" class="screen">
+      <h1>モグラたたき</h1>
+      
+      <!-- タイトル用のモグラ（タグを正しく閉じています） -->
+      <div class="title-mole-container">
+        <div class="title-hole">
+          <div class="title-mole"></div>
+        </div>
+      </div>
+
+      <p>制限時間30秒！モグラをたくさん叩こう！</p>
+      <button id="start-btn">ゲームスタート</button>
+    </div>
+
+    <!-- 2. ゲームプレイ画面 -->
+    <div id="game-screen" class="screen hidden">
+        <div id="countdown-overlay" class="hidden"></div>
+      <div class="score-board">
+        <p>スコア: <span id="score">0</span></p>
+        <p>残り時間: <span id="time">30</span>秒</p>
+      </div>
+
+      <div class="grid">
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+      </div>
+    </div>
+
+    <!-- 3. 結果画面 -->
+    <div id="result-screen" class="screen hidden">
+      <h1>タイムアップ！</h1>
+      <p class="final-score-text">最終スコア: <span id="final-score">0</span> 点</p>
+      <p id="rank-text" class="rank-text"></p>
+      <button id="title-btn">タイトルへ戻る</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
