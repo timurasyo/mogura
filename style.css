@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 横スクロールを完全に禁止 */
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f3f5;
@@ -18,6 +28,7 @@ body {
   width: 100%;
   
   max-width: 400px;
+  position: relative;
 }
 
 .hidden {
